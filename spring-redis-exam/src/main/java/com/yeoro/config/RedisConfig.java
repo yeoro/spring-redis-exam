@@ -19,28 +19,26 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
+import lombok.RequiredArgsConstructor;
+
 @Configuration
+@RequiredArgsConstructor
 public class RedisConfig {
 	
+	@Value("${redis.hostname}")
 	private final String HOSTNAME;
-	private final int PORT;
-	private final int DATABASE;
-	private final String PASSWORD;
-	private final Long TIMEOUT;
 	
-	public RedisConfig(
-			@Value("${redis.hostname}") String hostname,
-			@Value("${redis.port}") int port,
-			@Value("${redis.database}") int database,
-			@Value("${redis.password}") String password,
-			@Value("${redis.timeout}") Long timeout
-	) {
-		this.HOSTNAME = hostname;
-		this.PORT = port;
-		this.DATABASE = database;
-		this.PASSWORD = password;
-		this.TIMEOUT = timeout;
-	}
+	@Value("${redis.port}")
+	private final int PORT;
+	
+	@Value("${redis.database}")
+	private final int DATABASE;
+	
+	@Value("${redis.password}")
+	private final String PASSWORD;
+	
+	@Value("${redis.timeout}")
+	private final Long TIMEOUT;
 	
 	// Redis Á¢¼Ó
 	@Bean

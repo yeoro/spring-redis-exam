@@ -20,4 +20,5 @@ public class User implements Serializable{
 	@JsonProperty("created_at")
 	@JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS")
 	private LocalDateTime createAt;
+
 }
