@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.google.common.collect.ImmutableMap;
+import com.yeoro.domain.RegisterUserRequest;
 import com.yeoro.domain.User;
 import com.yeoro.service.UserService;
 
@@ -48,7 +49,7 @@ public class UserController {
 	
 	// 사용자 등록
 	@PostMapping("/users")
-	public ResponseEntity<?> registerUser(@RequestBody RegisterUserRequest request) {
+	public ResponseEntity<?> registerUser(@RequestBody RegisterUserRequest request) throws IOException {
 		User user = userService.registerUser(request.getUsername());
 		
 		return new ResponseEntity<>(user, HttpStatus.OK);
