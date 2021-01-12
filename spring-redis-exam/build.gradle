@@ -19,12 +19,36 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	// 웹 어플리케이션 개발
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	
+	// Redis
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	
+	// JSON 핸들링
+	implementation 'org.springframework.boot:spring-boot-starter-json'
+	
+	// lombok
 	compileOnly 'org.projectlombok:lombok'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
+	
+	// 저장 후 서버 자동 재실행 기능 사용
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+	// ImmutableMap 사용
+	implementation group: 'com.google.guava', name: 'guava', version: '28.1-jre'
+	
+	// 객체를 Redis에 저장할 때 사용
+	implementation group: 'org.msgpack', name: 'jackson-dataformat-msgpack', version: '0.8.18'
+	
+	// StringUtils 사용
+	implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+	
+	// StringSubstitutor 사용
+	 implementation group: 'org.apache.commons', name: 'commons-text', version: '1.8'
+	
 }
 
 test {
