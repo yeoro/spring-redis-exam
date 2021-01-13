@@ -12,6 +12,7 @@ configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
 	}
+	compile.exclude group: "org.slf4j", module: "slf4j-log4j12"
 }
 
 repositories {
@@ -21,11 +22,12 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	compileOnly 'org.projectlombok:lombok'
+	implementation 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	compileOnly 'it.ozimov:embedded-redis:0.7.3'
+	implementation 'it.ozimov:embedded-redis:0.7.3'
+	implementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
 }
 
 test {

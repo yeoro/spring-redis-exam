@@ -15,7 +15,6 @@ import redis.embedded.RedisServer;
  * Embedded Redis : H2와 같은 내장 Redis 데몬
  * 설정 파일이 local일 때만 작동하도록 @Profile 어노테이션 추가
  */
-@Slf4j
 @Profile("local")
 @Configuration
 @RequiredArgsConstructor
