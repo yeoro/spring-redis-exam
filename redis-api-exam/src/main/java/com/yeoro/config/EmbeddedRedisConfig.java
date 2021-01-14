@@ -18,16 +18,15 @@ import redis.embedded.RedisServer;
  */
 @Profile("local")
 @Configuration
+@RequiredArgsConstructor
 public class EmbeddedRedisConfig {
 
-	@Value("${spring.redis.port}")
-	private int port;
-	
+	private final RedisProperties redisProperties;
 	private RedisServer redisServer;
 	
 	@PostConstruct
 	public void redisServer() {
-		redisServer = new RedisServer(port);
+		redisServer = new RedisServer(redisProperties.getPort());
 		redisServer.start();
 	}
 	

@@ -34,7 +34,6 @@ import lombok.RequiredArgsConstructor;
  * Hash - opsForHash
  */
 @SpringBootTest
-@ContextConfiguration(classes = RedisRepositoryConfig.class)
 public class RedisRepositoryConfigTest{
 
 	@Autowired
