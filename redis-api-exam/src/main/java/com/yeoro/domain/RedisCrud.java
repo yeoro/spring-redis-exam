@@ -1,5 +1,6 @@
 package com.yeoro.domain;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import org.springframework.data.annotation.Id;
@@ -11,7 +12,7 @@ import lombok.Data;
 @Data
 @Builder
 @RedisHash("redisCrud")
-public class RedisCrud {
+public class RedisCrud implements Serializable{
 
 	@Id
 	private Long id;
