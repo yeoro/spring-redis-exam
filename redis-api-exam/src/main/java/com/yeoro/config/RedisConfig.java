@@ -68,11 +68,11 @@ public class RedisConfig {
 		Map<String, RedisCacheConfiguration> cacheConfigurations = new HashMap<>();
 		cacheConfigurations.put(CacheKey.REDISCRUD, RedisCacheConfiguration.defaultCacheConfig()
 				.entryTtl(Duration.ofSeconds(CacheKey.REDISCRUD_EXPIRE_SEC)));
+		
 		return RedisCacheManager.RedisCacheManagerBuilder
 				.fromConnectionFactory(connectionFactory)
 				.cacheDefaults(configuration)
 				.withInitialCacheConfigurations(cacheConfigurations)
 				.build();
-				
 	}
 }

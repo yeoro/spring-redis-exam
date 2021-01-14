@@ -9,6 +9,9 @@ import org.springframework.data.redis.core.RedisHash;
 import lombok.Builder;
 import lombok.Data;
 
+/*
+ * Redis에 객체를 저장하면 내부적으로 직렬화되어 저장되는데, 모델 class에 Serializable을 선언해주지 않으면 오류가 발생할 수 있음!
+ */
 @Data
 @Builder
 @RedisHash("redisCrud")
