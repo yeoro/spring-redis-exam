@@ -4,7 +4,7 @@
 
 ### **개발 환경**
 IDE
-- STS4  
+- STS4 4.9.0
 
 Framework
 - Spring Boot 2.4.1
