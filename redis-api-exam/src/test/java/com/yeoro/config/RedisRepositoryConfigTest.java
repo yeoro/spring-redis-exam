@@ -20,6 +20,8 @@ import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import lombok.RequiredArgsConstructor;
+
 
 /**
  * 데이터 타입별 테스트를 진행하여 실제 서버에 키-값이 저장되는지 확인
@@ -32,9 +34,8 @@ import org.springframework.test.context.junit4.SpringRunner;
  * Hash - opsForHash
  */
 @SpringBootTest
-@RunWith(SpringRunner.class)
 @ContextConfiguration(classes = RedisRepositoryConfig.class)
-public class RedisRepositoryConfigTest {
+public class RedisRepositoryConfigTest{
 
 	@Autowired
 	StringRedisTemplate redisTemplate;

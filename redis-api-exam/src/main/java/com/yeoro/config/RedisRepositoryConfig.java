@@ -16,8 +16,8 @@ import lombok.RequiredArgsConstructor;
  * RedisTemplate을 통해 RedisConnection에서 넘겨준 byte값을 객체 직렬화
  */
 @Configuration
-@RequiredArgsConstructor
 @EnableRedisRepositories
+@RequiredArgsConstructor
 public class RedisRepositoryConfig {
 
 	private final RedisProperties redisProperties;
