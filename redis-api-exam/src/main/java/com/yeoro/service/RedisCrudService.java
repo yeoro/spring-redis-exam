@@ -4,13 +4,14 @@ import org.springframework.stereotype.Service;
 
 import com.yeoro.domain.RedisCrud;
 import com.yeoro.domain.RedisCrudRepository;
+import com.yeoro.dto.RedisCrudResponseDto;
 import com.yeoro.dto.RedisCrudSaveRequestDto;
 
 import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-public class RedisService {
+public class RedisCrudService {
 
 	private final RedisCrudRepository redisCrudRepository;
 	
