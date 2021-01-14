@@ -1,9 +1,9 @@
 package com.yeoro.controller;
 
-import java.util.Arrays;
-import java.util.Set;
+import java.util.List;
 
-import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,23 +28,15 @@ import lombok.extern.slf4j.Slf4j;
 public class RedisController {
 
 	private final RedisCrudService redisCrudService;
-	private final StringRedisTemplate redisTemplate;
 	
 	@GetMapping("/")
 	public String ok() {
 		return "ok";
 	}
 	
-	@GetMapping("/keys")
-	public String keys() {
-		Set<String> keys = redisTemplate.opsForSet().members("*");
-		
-		for(String s : keys) {
-			System.out.println("keys : " + s);
-		}
-		assert keys != null;
-		
-		return Arrays.toString(keys.toArray());
+	@GetMapping("/users")
+	public ResponseEntity<List<String>> keys() {
+		return new ResponseEntity<List<String>>(redisCrudService.getAll(), HttpStatus.OK);
 	}
 	
 	@PostMapping("/save")
