@@ -1,5 +1,6 @@
 package com.yeoro.dto;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import com.yeoro.domain.RedisCrud;
@@ -7,7 +8,7 @@ import com.yeoro.domain.RedisCrud;
 import lombok.Data;
 
 @Data
-public class RedisCrudResponseDto {
+public class RedisCrudResponseDto implements Serializable{
 
 	private Long id;
 	private String description;
