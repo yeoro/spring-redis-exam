@@ -2,7 +2,9 @@ package com.yeoro.service;
 
 import org.springframework.stereotype.Service;
 
+import com.yeoro.domain.RedisCrud;
 import com.yeoro.domain.RedisCrudRepository;
+import com.yeoro.dto.RedisCrudSaveRequestDto;
 
 import lombok.RequiredArgsConstructor;
 
@@ -12,7 +14,7 @@ public class RedisService {
 
 	private final RedisCrudRepository redisCrudRepository;
 	
-	public Long save(RediscrudSaveRequestDto requestDto) {
+	public Long save(RedisCrudSaveRequestDto requestDto) {
 		return redisCrudRepository.save(requestDto.toRedisHash()).getId();
 	}
 	
