@@ -3,8 +3,8 @@
 ### API Spec
 |API Endpoint|HTTP Method|Request Body|Description|
 |--|--|--|--|
-|/spring-redis/users|POST|{"username":"testUser"}|사용자 등록|
-|/spring-redis/users/{username}|GET||사용자 조회|
+|/redis-api/save|POST|{<br>"id": id, <br>"description": desc}|사용자 등록|
+|/redis-api/get/{id}|GET||사용자 조회|
 |/spring-redis/users/{username}|DELETE|사용자 삭제|
 |/spring-redis/users|GET|전체 사용자 조회|
 

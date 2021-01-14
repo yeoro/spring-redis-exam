@@ -25,4 +25,12 @@ public class RedisCrudService {
 		
 		return new RedisCrudResponseDto(redisCrud);
 	}
+	
+	public String delete(Long id) {
+		RedisCrud redisCrud = redisCrudRepository.findById(id).orElseThrow(
+				() -> new IllegalArgumentException("Nothing saved. id = " + id));
+		redisCrudRepository.delete(redisCrud);
+		
+		return "ok";
+	}
 }
