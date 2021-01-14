@@ -3,13 +3,9 @@
 <br>
 
 ### **개발 환경**
-IDE
-- STS4 4.9.0
-
-Framework
-- Spring Boot 2.4.1
-
-DB
+- Java 11  
+- STS4 4.9.0  
+- Spring Boot 2.4.1  
 - Redis 3.2.100    
 <br>
 
