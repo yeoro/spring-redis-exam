@@ -10,7 +10,8 @@
 - Swagger 3.0.0
 <br>
 
-### **API Spec**
+### **API**
+Spec
 |API Endpoint|HTTP Method|Request Body|Description|
 |--|--|--|--|
 |/redis-api/save|POST|{<br>"id": id, <br>"description": desc<br>}|사용자 등록|
@@ -18,6 +19,9 @@
 |/redis-api/users|GET|전체 사용자 조회|
 |/redis-api/delete/{id}|DELETE|사용자 삭제|
 <br>
+
+Url
+localhost:8080/swagger-ui/index.html
 
 ### **Caching Result**
 ![caching_result](./redis_cache_result.png)
