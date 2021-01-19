@@ -11,7 +11,7 @@
 <br>
 
 ### **API**
-Spec
+- Spec
 |API Endpoint|HTTP Method|Request Body|Description|
 |--|--|--|--|
 |/redis-api/save|POST|{<br>"id": id, <br>"description": desc<br>}|사용자 등록|
@@ -20,7 +20,7 @@ Spec
 |/redis-api/delete/{id}|DELETE|사용자 삭제|
 <br>
 
-Url
+- Url  
 localhost:8080/swagger-ui/index.html
 
 ### **Caching Result**
