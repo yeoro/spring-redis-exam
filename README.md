@@ -11,7 +11,8 @@
 <br>
 
 ### **API**
-- Spec
+- Spec  
+
 |API Endpoint|HTTP Method|Request Body|Description|
 |--|--|--|--|
 |/redis-api/save|POST|{<br>"id": id, <br>"description": desc<br>}|사용자 등록|
