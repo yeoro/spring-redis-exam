@@ -8,7 +8,6 @@
 - Spring Boot 2.4.1  
 - Redis 3.2.100   
 - Swagger 3.0.0
-<br>
 
 ### **API**
 - Spec  
@@ -19,7 +18,6 @@
 |/redis-api/get/{id}|GET||사용자 조회|
 |/redis-api/users|GET|전체 사용자 조회|
 |/redis-api/delete/{id}|DELETE|사용자 삭제|
-<br>
 
 - Url  
 localhost:8080/swagger-ui/index.html
