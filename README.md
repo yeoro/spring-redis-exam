@@ -6,7 +6,8 @@
 - Java 11  
 - STS4 4.9.0  
 - Spring Boot 2.4.1  
-- Redis 3.2.100    
+- Redis 3.2.100   
+- Swagger 3.0.0
 <br>
 
 ### **API Spec**
